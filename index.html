@@ -27,7 +27,7 @@
           />スキューバ・マリン
         </p>
       </div>
-      <div class="container">
+      <div class="heading">
         <img src="img/logo.png" alt="スキューバ・マリン" class="header__logo" />
         <div class="header__contact">
           <a href="tel:098XXXXXXX" class="tel-link visible-sp"
@@ -43,6 +43,13 @@
               ></path></svg
             >098-XXXX-XXXX</a
           >
+          <div class="header__address visible-pc">
+            <div class="header__address-detail">
+              <span>沖縄県XXXXXXX</span>
+              <time>9:00 - 18:00</time>
+            </div>
+            <p class="tel">TEL<span>098-XXX-XXXX</span></p>
+          </div>
           <a href="" class="reserve-link"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,34 +66,86 @@
         </div>
         <div class="header-nav">
           <button
-            class="header-nav__toggle visible-sp"
+            class="hamburger-btn visible-sp"
             aria-expanded="false"
-            aria-controls="header-menu"
+            aria-controls="global-nav"
           >
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
           </button>
-          <nav id="header-menu" class="header-nav__menu">
-            <ul class="header__menu-list">
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">トップ</a></li>
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">店舗</a></li>
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">コース一覧</a></li>
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">スタッフ</a></li>
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">お客様の声</a></li>
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">Q&A</a></li>
-              <li class="header__menu-item"><a href="#"><img src="/img/icon-arrow.png" class="visible-sp">お問合せ</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
-      <img src="/img/hero-sp.webp" alt="スキューバダイビングをしている様子" class="hero">
     </header>
-
+    <div class="kv-wrapper">
+          <nav id="global-nav" class="global-nav">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img src="/img/icon-arrow.png" class="visible-sp" />トップ</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img src="/img/icon-arrow.png" class="visible-sp" />店舗</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img
+                    src="/img/icon-arrow.png"
+                    class="visible-sp"
+                  />コース一覧</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img
+                    src="/img/icon-arrow.png"
+                    class="visible-sp"
+                  />スタッフ</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img
+                    src="/img/icon-arrow.png"
+                    class="visible-sp"
+                  />お客様の声</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img src="/img/icon-arrow.png" class="visible-sp" />Q&A</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a href="#"
+                  ><img
+                    src="/img/icon-arrow.png"
+                    class="visible-sp"
+                  />お問合せ</a
+                >
+              </li>
+            </ul>
+          </nav>
+        <div class="hero">
+          <img
+            src="/img/hero-sp.webp"
+            alt="スキューバダイビングをしている様子"
+            class="hero-img visible-sp"
+          />
+          <img
+            src="/img/hero-pc.webp"
+            alt="スキューバダイビングをしている様子"
+            class="hero-img visible-pc"
+          />
+        </div>
+    </div>
     <div class="container">
       <main>
         <section>
-          <h2 class="heading-ttl"></h2>
+          <h2 class="heading-ttl"></h2> 
         </section>
       </main>
 

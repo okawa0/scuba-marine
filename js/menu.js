@@ -1,11 +1,8 @@
 // ハンバーガーメニュー
 // ハンバーガーボタンの要素取得
-const btn = document.querySelector('.header-nav__toggle');
+const btn = document.querySelector('.hamburger-btn');
 // メニューの要素取得
-const menu = document.querySelector('.header-nav__menu');
-
-// //スクロール位置の保存
-// let scrollPosition = 0;
+const menu = document.querySelector('.global-nav');
 
 // クリックイベントの開始
 btn.addEventListener('click', () => {

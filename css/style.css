@@ -6,6 +6,7 @@
   color: #333;
 }
 
+/* PCのみ,SPのみ表示 */
 @media (min-width: 640px) {
   .visible-sp {
     display: none !important;
@@ -17,31 +18,51 @@
   }
 }
 
+/* ラッパー */
 .container {
   width: 91%;
   margin-inline: auto;
 }
 @media (min-width: 640px) {
   .container {
-    width: min(60%, 1200px);
+    width: min(88%, 1000px);
   }
 }
 
+/* 水色バーサブタイトル */
 .subtitle {
   background-color: #00a0e9;
 }
-
 .subtitle-text {
   color: #fff;
   font-size: 14px;
   padding: 0.5em;
 }
 
+/* タイトル＋予約 */
+.heading {
+  margin-inline: auto;
+  width: 91%;
+}
+@media (min-width: 640px) {
+  .heading {
+    width: min(88%, 1200px);
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+}
 .header__logo {
   width: 50%;
   height: auto;
   display: block;
   margin: 1rem auto;
+}
+@media (min-width: 640px) {
+  .header__logo {
+    width: 20%;
+    margin: auto 0;
+  }
 }
 
 .header__contact {
@@ -69,6 +90,16 @@
   vertical-align: middle;
 }
 
+.header__address {
+  width: 280px;
+  margin-right: 1rem;
+}
+
+.tel span {
+  font-size: 24px;
+  font-weight: 500;
+}
+
 .reserve-link {
   background-color: #f39800;
   color: #fff;
@@ -82,6 +113,11 @@
   padding: 0.2em 0.3em;
   gap: 0.2em;
 }
+@media (min-width: 640px) {
+  .reserve-link {
+    font-size: 20px;
+  }
+}
 .reserve-link svg {
   vertical-align: middle;
 }
@@ -92,8 +128,13 @@
 .header-nav {
   height: auto;
 }
+@media (min-width: 640px) {
+  .header-nav {
+    display: none;
+  }
+}
 /* ハンバーガーボタンのベース */
-.header-nav__toggle {
+.hamburger-btn {
   width: 100%;
   height: 42px;
   background-color: #00a0e9;
@@ -122,42 +163,85 @@
   top: 28px;
 }
 /* 開いたときの三本線 */
-.header-nav__toggle.is-active .hamburger-line {
+.hamburger-btn.is-active .hamburger-line {
   width: 26px;
   height: 4px;
   right: 8px;
 }
-.header-nav__toggle.is-active .hamburger-line:nth-child(1) {
+.hamburger-btn.is-active .hamburger-line:nth-child(1) {
   top: 20px;
   transform: rotate(45deg);
 }
-.header-nav__toggle.is-active .hamburger-line:nth-child(2) {
+.hamburger-btn.is-active .hamburger-line:nth-child(2) {
   opacity: 0;
 }
-.header-nav__toggle.is-active .hamburger-line:nth-child(3) {
+.hamburger-btn.is-active .hamburger-line:nth-child(3) {
   top: 20px;
   transform: rotate(-45deg);
 }
+.kv-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  /* ヘッダーとヒーローをまとめるラッパー */
+  .kv-wrapper {
+    flex-direction: column-reverse;
+  }
+}
 /* メニュー全体 */
-.header-nav__menu {
+.global-nav {
   height: 0;
   background: #fff;
   transition: height 0.3s ease;
   z-index: 9998;
   overflow: hidden;
+  /* margin-bottom: 1rem; */
+}
+@media (min-width: 640px) {
+  .global-nav {
+    height: auto;
+    box-shadow: 0px 10px 10px #ccc;
+    padding-block: 0.5em;
+  }
 }
 /* 開いたときのメニュー */
-.header-nav__menu.is-open {
-  height: 380px;
+.global-nav.is-open {
+  height: 400px;
+}
+@media (min-width: 640px) {
+  .global-nav.is-open {
+    height: auto;
+  }
 }
 /* メニュー内のリンク */
 .header__menu-list {
   list-style: none;
   padding-block: 1rem;
-  margin-left: .5rem;
+  margin-left: 1.5rem;
 }
-.header__menu-list li+li{
+@media (min-width: 640px) {
+  .header__menu-list {
+    display: flex;
+    margin: 0 auto;
+    width: min(88%, 1000px);
+  }
+}
+.header__menu-list li + li {
   margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .header__menu-list li + li {
+    margin-top: 0;
+  }
+}
+@media (min-width: 640px) {
+  .header__menu-item {
+    border-inline: 1px solid #ddd;
+    flex: 1;
+    text-align: center;
+    padding-block: 1em;
+  }
 }
 .header__menu-item a {
   text-decoration: none;
@@ -165,14 +249,36 @@
   display: flex;
   align-items: center;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .header__menu-item a {
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    display: block;
+    text-align: center;
+  }
 }
 .header__menu-item img {
   width: 1em;
   height: 1em;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
-.hero{
-  width: 100%;
+
+@media (min-width: 640px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    border-block: 1px solid #ccc;
+  }
+}
+.hero-img {
   height: auto;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .hero img {
+    width: min(88%, 1200px);
+  }
 }
