@@ -5,6 +5,11 @@
   font-family: "Meiryo", "Hiragino Sans", sans-serif;
   color: #333;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* PCのみ,SPのみ表示 */
 @media (min-width: 640px) {
@@ -64,16 +69,13 @@
     margin: auto 0;
   }
 }
-
 .header__contact {
   display: flex;
   justify-content: space-between;
 }
-
 .header__contact path {
   color: #fff;
 }
-
 .tel-link {
   background-color: #f39800;
   color: #fff;
@@ -89,17 +91,14 @@
 .tel-link svg {
   vertical-align: middle;
 }
-
 .header__address {
   width: 280px;
   margin-right: 1rem;
 }
-
 .tel span {
   font-size: 24px;
   font-weight: 500;
 }
-
 .reserve-link {
   background-color: #f39800;
   color: #fff;
@@ -300,19 +299,35 @@
   }
 }
 
+/* メインコンテンツ */
 .layout {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 2rem;
+  display: block;
 }
-
+@media (min-width: 640px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+  }
+}
+/* 新着情報セクション */
+.news-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .news-section {
+    margin-top: 2rem;
+  }
+}
 .heading-ttl {
   background-color: #e7ecd5;
   padding: 0.5rem;
   position: relative;
   padding-left: 1em;
+  font-size: 22px;
 }
-
 .heading-ttl::before {
   content: "";
   width: 6px;
@@ -323,4 +338,57 @@
   left: 0;
   transform: translateY(-50%);
   margin-inline: 0.5em;
+}
+.news-item {
+  margin-top: 1rem;
+}
+.news-item span {
+  color: #aaa;
+}
+.news-item p {
+  color: #00a0e9;
+  font-weight: 700;
+  font-size: 22px;
+}
+.item-list-link {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  background-color: #f39800;
+  padding: 0.4rem 1rem 0.4rem 3rem;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-top: 1rem;
+}
+.item-list-link svg {
+  width: 2em;
+  height: 2em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+.item-list-link svg path {
+  stroke: #fff;
+}
+/* 人気のコースセクション */
+.course-section {
+  margin-top: 2rem;
+}
+.course-intro {
+  margin-block: 1rem;
+  line-height: 1.6;
+}
+.course-cards{
+  display: flex;
+  justify-content: space-between;
+}
+.course-cards a{
+  display: block;
+  width: 31%;
+}
+.course-cards img{
+  width: 100%;
+}
+/* お客様の声セクション */
+.voice-section {
+  margin-top: 2rem;
 }
