@@ -472,17 +472,17 @@ header {
 
 .main__cta {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   position: relative;
 }
-.main-cta::after {
+.main__cta::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  left: -2.5rem;
+  transform: translateY(-68%);
   width: 1px;
-  height: 2.5rem; /* ← この「中途半端な長さ」を明示的に管理 */
+  height: 3.5rem;
   background-color: #ccc;
 }
 .main__cta a {
@@ -493,6 +493,7 @@ header {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   transition: 0.3s;
+  font-weight: 700;
 }
 .main__cta svg {
   width: 24px;
