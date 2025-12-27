@@ -501,7 +501,7 @@ header {
   background-color: #f39800;
   color: #fff;
   padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   font-size: 1.2rem;
   transition: 0.3s;
   font-weight: 700;
@@ -684,7 +684,7 @@ header {
 
 @media (min-width: 640px) {
   .footer__info {
-    margin-block: 3rem;
+    margin-top: 3rem;
     gap: 3rem;
     justify-content: center;
   }
@@ -735,4 +735,11 @@ header {
   text-align: center;
   font-size: 0.8rem;
   margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+  .copyright{
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
 }
